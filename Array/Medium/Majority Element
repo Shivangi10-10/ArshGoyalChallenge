@@ -1,0 +1,13 @@
+class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        cnt=Counter(nums)
+        threshold=len(nums)//2
+        ml=0
+        for  elt,c in cnt.items():
+         if c>threshold:
+             ml=elt
+        return ml
